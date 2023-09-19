@@ -1,0 +1,11 @@
+<div class="cart-container">
+    <div class="cart-panel">
+        <app-cart-item *ngFor="let item of cartList" [item] = "item" (removeItem)="removeItem(item)"></app-cart-item>
+        <div class=".empty-cart-message">
+            <p>Total: {{totalPrice}}</p>
+        </div>
+    </div>
+    <div class="cart-panel">
+        <app-cart-order></app-cart-order>
+    </div>
+</div>

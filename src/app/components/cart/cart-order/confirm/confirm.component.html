@@ -1,0 +1,25 @@
+<div class="confirmation-container">
+    <h1>Success!</h1>
+    <br>
+    <p>Thank you, <strong>{{ user.fullname }}</strong></p>
+    <br>
+    <p>Total payment <strong>{{ totalPrice }}</strong></p>
+    <table>
+      <tr>
+        <th>Product</th>
+        <th>Amount</th>
+        <th>Price</th>
+        <th>Price total</th>
+      </tr>
+      <tr *ngFor="let item of cartList">
+        <td>{{ item.name }}</td>
+        <td>{{ item.selectedAmount }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.price * item.selectedAmount!  }}</td>
+      </tr>
+    </table>
+    <br>
+    <p>Address: <strong>{{ user.address }}</strong></p>
+    <br>
+    <button class="btn btn-danger" routerLink="/products">Back to Product list</button>
+  </div>

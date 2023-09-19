@@ -1,0 +1,15 @@
+<div class="detail-container">
+    <div>
+        <img src="{{item.url}}" class="img"/>
+    </div>
+    <div class="detail-item">
+        <h2>{{item.name}}</h2>
+        <p>{{item.price}} $</p>
+        <p>{{item.description}}</p>
+        <form class="form-margin amount-selector" #form="ngForm" (ngSubmit) = "onClickAdd(item)">
+            <p class="item-amount " >Amount: <input class="form-control item-amount-selector" type="number" min="1" max="{{item.availableAmount}}" name="item.selectedAmount" [(ngModel)]="item.selectedAmount"></p>
+            <button type="submit" class="button btn btn-success">Add to cart</button>
+        </form>
+    </div>
+</div>
+

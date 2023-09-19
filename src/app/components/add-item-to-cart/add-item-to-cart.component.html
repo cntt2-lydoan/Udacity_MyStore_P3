@@ -1,0 +1,10 @@
+<div>
+    <form class="form-margin amount-selector" #form="ngForm" (ngSubmit) = "onClickAdd(item)">
+        <select class="number-input form-control" name="selectedAmount" [(ngModel)]="selectedAmount">
+            <option value="0" disabled selected><p>Amount</p></option>
+            <option *ngFor="let number of availableAmounts" value="{{number}}">{{number}}</option>
+        </select>
+        <button type="submit" class="button">Add to cart</button>
+    </form>
+</div>
+

@@ -1,0 +1,8 @@
+<div class="product-container">
+    <a routerLink="/products/{{ item.id }}" routerLinkActive="router-link-active">
+        <img src="{{item.url}}" class="product-image"/>
+    </a>
+    <h2>{{item.name}}</h2>
+    <p>{{ item.price}}</p>
+    <app-add-item-to-cart [item] = "item"></app-add-item-to-cart>
+</div>

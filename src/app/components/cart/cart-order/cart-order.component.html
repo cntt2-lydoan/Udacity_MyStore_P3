@@ -1,0 +1,15 @@
+<form (ngSubmit)="onSubmit()" #form="ngForm">
+    <div class="form-group">
+      <label for="fullName">Full Name</label>
+      <input type="text" class="form-control" required minlength="2" name="fullname" [(ngModel)]="user.fullname" (ngModelChange)="user.fullname = $event" placeholder="(minimum 2 characters)">
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input type="text" class="form-control" required minlength="6" name="address" [(ngModel)]="user.address" (ngModelChange)="user.address = $event" placeholder="(minimum 6 characters)">
+    </div>
+    <div class="form-group">
+      <label for="cardNumber">Credit Card</label>
+      <input type="text" class="form-control" required minlength="16" maxlength="16" pattern="[0-9]*" name="cardNumber" [(ngModel)]="user.cardNumber" (ngModelChange)="user.cardNumber = $event" placeholder="(16-digits number)">
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="form.invalid">Checkout</button>
+  </form>
