@@ -21,7 +21,7 @@ npm run prettier
 
 npm run lint
 
-#### Run the project
+## Run the project
 
 Run `ng serve` OR `npm start` . 
 Navigate to `http://localhost:4200/`. 
