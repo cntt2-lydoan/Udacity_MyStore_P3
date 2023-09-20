@@ -39,8 +39,9 @@ export class ProductItemDetailComponent {
     );
   }
   onClickAdd(item: Product): void {
-    if(this.selectedAmount !== 0){
-      this.item.selectedAmount = this.selectedAmount;
+    if(item.selectedAmount != 0){
+      this.item.selectedAmount = item.selectedAmount;
+      this.selectedAmount = Number(item.selectedAmount);
       this.cartService.addToCart(item);
       alert(`${this.item.name} added to cart!\nTotal: ${this.selectedAmount}`);
     }else{
